@@ -1,4 +1,4 @@
-# Urlsniff
+# urlsniff
 
 A URL fetcher with endless possibilities.
 
