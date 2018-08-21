@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
 		fprintf(stderr, "\n"\
 						"Usage: \n"\
 						" urlsniff [URL] [URL] ...\n\n"\
-						"Fetch URLs from a webpage."
+						"Fetch URLs from a webpage.\n"
 		);
 	}
 	else {
