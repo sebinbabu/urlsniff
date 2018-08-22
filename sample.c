@@ -47,8 +47,9 @@ int url_extract(char *str, int n, char **p) {
 int main() {
 	char url[2100];
 	char *html = "<ul class=\"footer-links\">\r\n\t\t\t\t\t\t\t<li><a href=\"https://www.chitkara.edu.in/chitkara-educational-trust\">Chitkara Educational Trust</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"https://www.chitkara.edu.in/overview/\">Chitkara University, Punjab</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://chitkarauniversity.edu.in/\" target=\"_blank\">Chitkara University, Himachal Pradesh</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.chitkaraschool.in\" target=\"_blank\">Chitkara International School</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"https://www.chitkara.edu.in/international-collaborations/\">Office of International Affairs</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"https://www.chitkara.edu.in/office-external-affairs/\">Office of External Affairs</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"https://www.chitkara.edu.in/can/\"  target=\"_blank\">Chitkara Alumni Network</a></li>\r\n                            <li><a href=\"https://curin.chitkara.edu.in/\"  target=\"_blank\">CURIN</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://cuceed.org/\"  target=\"_blank\">CEED</a></li>\r\n\t\t\t\t\t\t</ul>\r\n";
-	char *t = html;
+	char *t = html; //a temporary variable to hold address accross subsequent calls to url extract
 	while(url_extract(url, 2100, &t)) //2100 is max URL size
 		printf("%s\n", url);
+	//url_extract filles the url array with the extracted url
 	return 0;
 }
